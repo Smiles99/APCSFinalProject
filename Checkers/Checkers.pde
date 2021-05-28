@@ -1,30 +1,23 @@
-ArrayList<piece> redPieces;
-ArrayList<piece> blackPieces;
 int remainingRed, remainingBlack, capturedRed, capturedBlack;
 Boolean turn, gameOver;
 PImage redMan, redKing, blackMan, blackKing;
 PImage[][] boardPositions;
 
 void setup() {
-  //Board Creation
   size(800,800);
-  for (int i = 0; i<8; i++) {
-    for (int j = 0; j<8; j++) { 
-      if ((i+j) % 2 == 0) {
-        fill(255, 0, 0);
-      } else {
-        fill(0);
-      }
-      rect(i * 100, j * 100, 100, 100);
-    }
-  }
   
+  //Upload Piece Images
   redMan = loadImage("RedMan.png");
   redKing = loadImage("RedKing.png");
   blackMan = loadImage("BlackMan.png");
   blackKing = loadImage("BlackKing.png");
   
+  startingPositions();
+}
+
+void startingPositions() {
   boardPositions = new PImage[8][8];
+  
   //Spawn Red Pieces
   boardPositions[0][1] = redMan;
   boardPositions[0][3] = redMan;
@@ -52,6 +45,21 @@ void setup() {
   boardPositions[7][2] = blackMan;
   boardPositions[7][4] = blackMan;
   boardPositions[7][6] = blackMan;
-  
-  //turn = false;
+}
+
+void showBoard() {
+  //Create Initial Board
+  for (int i = 0; i<8; i++) {
+    for (int j = 0; j<8; j++) { 
+      if ((i+j) % 2 == 0) {
+        fill(255, 0, 0);
+      } else {
+        fill(0);
+      }
+      rect(i * 100, j * 100, 100, 100);
+      if (boardPositions[j][i] != null) {
+        image(boardPositions[j][i], i * 100, j * 100);
+      }
+    }
+  }
 }
