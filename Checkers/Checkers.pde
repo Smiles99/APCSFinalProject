@@ -24,11 +24,20 @@ void draw() {
   if (gameOver) {
     if (remainingRed == 0) {
       fill (255);
-      text ("Black Wins", 0, 400, 800, 800);
+      textSize(100);
+      textAlign(CENTER);
+      text ("Black Wins", 400, 437);
     } else {
       if (remainingBlack == 0) {
         fill (255);
-        text ("Red Wins", 0, 400, 800, 800);
+      textSize(50);
+      textAlign(CENTER);
+      text ("Red Wins", 400, 418);
+      } else {
+        fill (255);
+      textSize(50);
+      textAlign(CENTER);
+      text ("Tie", 400, 416);
       }
     }
   }
