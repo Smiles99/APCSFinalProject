@@ -1,5 +1,5 @@
-int remainingRed, remainingBlack, capturedRed, capturedBlack;
-Boolean turn, gameOver, kingMe;
+int remainingRed, remainingBlack;
+Boolean turn, gameOver, kingMe, click;
 PImage redMan, redKing, blackMan, blackKing;
 PImage[][] boardPositions;
 
@@ -21,6 +21,17 @@ void setup() {
 
 void draw() {
   showBoard();
+  if (gameOver) {
+    if (remainingRed == 0) {
+      fill (255);
+      text ("Black Wins", 0, 400, 800, 800);
+    } else {
+      if (remainingBlack == 0) {
+        fill (255);
+        text ("Red Wins", 0, 400, 800, 800);
+      }
+    }
+  }
 }
 
 void startingPositions() {
@@ -53,6 +64,12 @@ void startingPositions() {
   boardPositions[7][2] = blackMan;
   boardPositions[7][4] = blackMan;
   boardPositions[7][6] = blackMan;
+  
+  kingMe = false;
+  click = false;
+  gameOver = false;
+  remainingRed = 12;
+  remainingBlack = 12;
 }
 
 void showBoard() {
@@ -71,4 +88,15 @@ void showBoard() {
       }
     }
   }
+}
+
+void mousePressed() {
+  
+  //if (boardPositions[mouseY / 100][mouseX / 100] == redMan) {
+  //  boardPositions[mouseY / 100][mouseX / 100] = redKing;
+  //} else {
+  //  if (boardPositions[mouseY / 100][mouseX / 100] == blackMan) {
+  //    boardPositions[mouseY / 100][mouseX / 100] = blackKing;
+  //  }
+  //}
 }
