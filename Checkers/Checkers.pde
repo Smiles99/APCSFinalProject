@@ -1,18 +1,26 @@
 int remainingRed, remainingBlack, capturedRed, capturedBlack;
-Boolean turn, gameOver;
+Boolean turn, gameOver, kingMe;
 PImage redMan, redKing, blackMan, blackKing;
 PImage[][] boardPositions;
 
 void setup() {
   size(800,800);
   
-  //Upload Piece Images
+  //Upload And Fit Piece Images
   redMan = loadImage("RedMan.png");
+  redMan.resize(100, 100);
   redKing = loadImage("RedKing.png");
+  redKing.resize(100, 100);
   blackMan = loadImage("BlackMan.png");
+  blackMan.resize(100, 100);
   blackKing = loadImage("BlackKing.png");
+  blackKing.resize(100, 100);
   
   startingPositions();
+}
+
+void draw() {
+  showBoard();
 }
 
 void startingPositions() {
@@ -53,14 +61,14 @@ void showBoard() {
     for (int j = 0; j<8; j++) { 
       if ((i+j) % 2 == 0) {
         fill(255, 0, 0);
+        rect(i * 100, j * 100, 100, 100);
       } else {
         fill(0);
+        rect(i * 100, j * 100, 100, 100);
       }
-      rect(i * 100, j * 100, 100, 100);
       if (boardPositions[j][i] != null) {
         image(boardPositions[j][i], i * 100, j * 100);
       }
     }
   }
 }
-
