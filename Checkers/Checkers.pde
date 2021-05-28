@@ -1,75 +1,18 @@
-ArrayList<Piece> redPieces;
-ArrayList<Piece> blackPieces;
-Boolean turn;
+ArrayList<piece> redPieces;
+ArrayList<piece> blackPieces;
+int remainingRed, remainingBlack, capturedRed, capturedBlack;
+Boolean turn, gameOver;
 void setup() {
   //Board Creation
   size(800,800);
-  background(255,0,0);
-  noStroke();
-  fill(0);
-  rect(0, 0, 100, 100);
-  fill(0);
-  rect(200, 0, 100, 100);
-  fill(0);
-  rect(400, 0, 100, 100);
-  fill(0);
-  rect(600, 0, 100, 100);
-  fill(0);
-  rect(100, 100, 100, 100);
-  fill(0);
-  rect(300, 100, 100, 100);
-  fill(0);
-  rect(500, 100, 100, 100);
-  fill(0);
-  rect(700, 100, 100, 100);
-  fill(0);
-  rect(0, 200, 100, 100);
-  fill(0);
-  rect(200, 200, 100, 100);
-  fill(0);
-  rect(400, 200, 100, 100);
-  fill(0);
-  rect(600, 200, 100, 100);
-  fill(0);
-  rect(100, 300, 100, 100);
-  fill(0);
-  rect(300, 300, 100, 100);
-  fill(0);
-  rect(500, 300, 100, 100);
-  fill(0);
-  rect(700, 300, 100, 100);
-  fill(0);
-  rect(0, 400, 100, 100);
-  fill(0);
-  rect(200, 400, 100, 100);
-  fill(0);
-  rect(400, 400, 100, 100);
-  fill(0);
-  rect(600, 400, 100, 100);
-  fill(0);
-  rect(100, 500, 100, 100);
-  fill(0);
-  rect(300, 500, 100, 100);
-  fill(0);
-  rect(500, 500, 100, 100);
-  fill(0);
-  rect(700, 500, 100, 100);
-  fill(0);
-  rect(0, 600, 100, 100);
-  fill(0);
-  rect(200, 600, 100, 100);
-  fill(0);
-  rect(400, 600, 100, 100);
-  fill(0);
-  rect(600, 600, 100, 100);
-  fill(0);
-  rect(100, 700, 100, 100);
-  fill(0);
-  rect(300, 700, 100, 100);
-  fill(0);
-  rect(500, 700, 100, 100);
-  fill(0);
-  rect(700, 700, 100, 100);
-  
-  turn = false;
+  for (int i = 0; i<8; i++) {
+    for (int j = 0; j<8; j++) { 
+      if ((i+j) % 2 == 0) {
+        fill(255, 0, 0);
+      } else {
+        fill(25);
+      }
+      rect(i * 100, j * 100, 100, 100);
+    }
+  }
 }
