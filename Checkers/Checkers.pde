@@ -164,7 +164,7 @@ PImage[][] move(int x1, int y1, int x2, int y2, PImage[][] boardPositions) {
       remainingBlack--;
     }
     if (!kingMe) {
-      if (canMove(x1, y1, x2 + 2, y2 + 2, turn, boardPositions) || canMove(x1, y1, x2 + 2, y2 - 2, turn, boardPositions) || canMove(x1, y1, x2 - 2, y2 + 2, turn, boardPositions) || canMove(x1, y1, x2 - 2, y2 - 2, turn, boardPositions)) {
+      if (canMove(x2, y2, x2 + 2, y2 + 2, turn, boardPositions) || canMove(x2, y2, x2 + 2, y2 - 2, turn, boardPositions) || canMove(x2, y2, x2 - 2, y2 + 2, turn, boardPositions) || canMove(x2, y2, x2 - 2, y2 - 2, turn, boardPositions)) {
         turn = !turn;
         multiJump = true;
         midX = x2;
