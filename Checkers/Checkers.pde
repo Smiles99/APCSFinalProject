@@ -224,7 +224,9 @@ boolean mustJump(boolean side) {
       }
       for (int k = 0; k < 8; k++) {
         for (int l = 0; l < 8; l++) {
-          if (canMove(i, j, k, l, side, boardPositions) && abs(i - k) == 2) return true;
+          if (canMove(i, j, k, l, side, boardPositions) && abs(i - k) == 2) {
+            return true;
+          }
         }
       }
     }
@@ -264,10 +266,10 @@ boolean canMove(int x1, int y1, int x2, int y2, boolean turn, PImage[][] boardPo
     }
   } else {
     if (boardPositions[x1][y1] == redMan) {
-      if (abs(y2 - y1) == 1 && x2 == x1+1 && boardPositions[x2][y2] == null) {
+      if (abs(y2 - y1) == 1 && x2 == x1 + 1 && boardPositions[x2][y2] == null) {
         return true;
       }
-      if (abs(y2 - y1) == 2 && x2 == x1+2 && boardPositions[x2][y2] == null && black(x1+1, (y1 + y2)/2, boardPositions)) {
+      if (abs(y2 - y1) == 2 && x2 == x1 + 2 && boardPositions[x2][y2] == null && black(x1+1, (y1 + y2)/2, boardPositions)) {
         return true;
       }
     } else if (boardPositions[x1][y1] == redKing) {
