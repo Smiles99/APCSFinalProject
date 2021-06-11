@@ -9,11 +9,11 @@ void setup() {
   //Upload And Fit Piece Images
   redMan = loadImage("RedMan.png");
   redMan.resize(100, 100);
-  redKing = loadImage("RedKing.png");
+  redKing = loadImage("RedKing.jpg");
   redKing.resize(100, 100);
   blackMan = loadImage("BlackMan.png");
   blackMan.resize(100, 100);
-  blackKing = loadImage("BlackKing.png");
+  blackKing = loadImage("BlackKing.jpg");
   blackKing.resize(100, 100);
   
   startingPositions();
