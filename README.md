@@ -17,3 +17,10 @@ Development log:
 6/7 - Continued to work on attempting to implement multiJump.
 6/9 - MultiJump has been implemented but is only able to jump twice.
 6/10 - Continues to work on implementing a true multiJump without success.
+
+Downloading and Running:
+Download the code onto your computer through the use of Download Zip
+Extract the folder onto your computer
+Open the main folder, then open the checkers folder, then select and open Checkers.pde
+Once Checkers.pde has loaded, click the play button in the top left of the screen.
+Clicking on a piece selects it, clicking on a space with a white dot moves it.
