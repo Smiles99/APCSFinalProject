@@ -16,3 +16,4 @@ Development log:
 6/3 - Finished implementing move, jump, and mustJump, multiJump still isn't working.
 6/7 - Continued to work on attempting to implement multiJump.
 6/9 - MultiJump has been implemented but is only able to jump twice.
+6/10 - Continues to work on implementing a true multiJump without success.
