@@ -13,4 +13,5 @@ Development log:
 5/27 - I changed the board creation so that it was constructed by for loops instead of a series of copy and pasted commands. I added the images of the checkers pieces and their positions on the board.
 5/28 - I reformatted the code to remove the NullPointerException that kept happening, updated images so that pieces appear and added draw() so the window that pops up isn't just a gray square, and added the basics of mousePressed and a small tester. I created the possible end conditions that of a win for either side, which comes from the other side having no pieces left on the board, and a tie, which comes from when one side can not make any legal moves.
 5/1 - Began work on the Basic checkers code, including move, jump, mustJump, and multiJump.
-5/3 - Finished implementing move and jump, mustJump and multiJump still isn't working.
+5/3 - Finished implementing move, jump, and mustJump, multiJump still isn't working.
+5/7 - Continued to work on attempting to implement multiJump.
