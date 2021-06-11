@@ -8,3 +8,4 @@ https://docs.google.com/document/d/1IsOXf5mbFWUrsB2Ye8Y9Q6WMxDmMMF3zVIcXQDVS-Y0/
 
 Development log:
 5/23 - I began work on the Design document as I answered the first few questions.
+5/24 - I finished answering the questions on the Design document except for the UML document.
