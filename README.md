@@ -17,6 +17,7 @@ Development log:
 6/7 - Continued to work on attempting to implement multiJump.
 6/9 - MultiJump has been implemented but is only able to jump twice.
 6/10 - Continues to work on implementing a true multiJump without success.
+6/11 - Finally managed to get a true multiJump to work.
 
 Downloading and Running:
 Download the code onto your computer through the use of Download Zip
