@@ -10,4 +10,5 @@ Development log:
 5/23 - I began work on the Design document as I answered the first few questions.
 5/24 - I finished answering the questions on the Design document except for the UML diagram. I created the basic checkers board by copy and pasting a series of rect commands.
 5/25 & 5/26 - I worked on and finished the first draft of the UML diagram.
-5/28 - I changed the board creation so that it was constructed by for loops instead of a series of copy and pasted commands. I added the images of the checkers pieces and their positions on the board.
+5/27 - I changed the board creation so that it was constructed by for loops instead of a series of copy and pasted commands. I added the images of the checkers pieces and their positions on the board.
+5/28 - I reformatted the code to remove the NullPointerException that kept happening, updated images so that pieces appear and added draw() so the window that pops up isn't just a gray square, and added the basics of mousePressed and a small tester. I created the possible end conditions that of a win for either side, which comes from the other side having no pieces left on the board, and a tie, which comes from when one side can not make any legal moves.
