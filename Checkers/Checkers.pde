@@ -139,18 +139,19 @@ void startingPositions() {
 }
 
 PImage[][] move(int x1, int y1, int x2, int y2, PImage[][] boardPositions) {
+  multiJump = false;
   if (boardPositions[x1][y1] == redMan) {
     if (x2 == 7) {
       boardPositions[x1][y1] = redKing;
       kingMe = true;
-      multiJump = false;
+      //multiJump = false;
     }
   } else {
     if (boardPositions[x1][y1] == blackMan) {
       if (x2 == 0) {
         boardPositions[x1][y1] = blackKing;
         kingMe = true;
-        multiJump = false;
+        //multiJump = false;
       }
     }
   }
@@ -170,7 +171,7 @@ PImage[][] move(int x1, int y1, int x2, int y2, PImage[][] boardPositions) {
         midX = x2;
         midY = y2;
       } else {
-        multiJump = false;
+        //multiJump = false;
       }
     }
   }
