@@ -10,3 +10,4 @@ Development log:
 5/23 - I began work on the Design document as I answered the first few questions.
 5/24 - I finished answering the questions on the Design document except for the UML diagram. I created the basic checkers board by copy and pasting a series of rect commands.
 5/25 & 5/26 - I worked on and finished the first draft of the UML diagram.
+5/28 - I changed the board creation so that it was constructed by for loops instead of a series of copy and pasted commands.
